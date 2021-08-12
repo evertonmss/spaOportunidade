@@ -6,4 +6,6 @@ export interface Oportunite{
     quantite:number;
     hoursWeek:number
     location:string;
+    txtButton: string;
+    iconUrl: string;
 }

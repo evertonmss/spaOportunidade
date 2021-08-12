@@ -1,5 +1,6 @@
 import { Oportunite } from "../../interfaces";
-import { Column } from "../layout";
+import { Row } from "../layout";
+//import { Column } from "../layout";
 import { CardDonate } from "./card";
 
 type ListProps = {
@@ -7,12 +8,12 @@ type ListProps = {
 }
 export const ListCards: React.FC<ListProps> = ({ itens }) => {
     return (
-        <Column>
+        <Row flexWrap='wrap' width='1200px'>
         {itens.map((item,index) => {
             return(
-                <CardDonate key={index} {...item}/>
+                <CardDonate key={index} {...item} />
             )
         })}
-        </Column>
+        </Row>
     );
 }

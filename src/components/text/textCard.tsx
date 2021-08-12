@@ -11,16 +11,17 @@ type TextProps = TypographyProps;
     top: 15.9px;
 
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    <TxtLocation>{location}</TxtLocation>
  * 
  * */
 export const TitleCard = styled.p<TextProps>`
-    font-family: 12px;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
     color: #8798AD;
-    position: static;
-    width: 134px;
-    height: 13.91px;
-    left: 24px;
-    top: 15.9px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     ${typography}   
 `;
@@ -42,7 +43,6 @@ export const TxtDescription = styled.p<TextProps>`
     flex: none;
     order: 0;
     flex-grow: 0;
-    margin: 16px 0px;
 `;
 export const TxtButton = styled.p<TextProps>`
     /* Detalhes */
@@ -79,7 +79,7 @@ export const TxtInstituion = styled.p<TextProps>`
 
     position: static;
     left: 0.5px;
-
+    margin-top: 16px;
     /* font-size-sm */
 
     font-family: Rubik;
@@ -97,7 +97,6 @@ export const TxtInstituion = styled.p<TextProps>`
     flex: none;
     order: 1;
     flex-grow: 0;
-    margin: 16px 0px;
 `;
 export const TxtLocation = styled.p<TextProps>`
     /* Vehicles on track Copy */

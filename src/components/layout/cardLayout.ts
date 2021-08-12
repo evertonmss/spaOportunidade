@@ -1,17 +1,25 @@
 import styled from "styled-components";
-import { layout, LayoutProps, space, SpaceProps, flex, FlexProps } from "styled-system";
+import { layout, LayoutProps, space, SpaceProps, flexbox, FlexboxProps } from "styled-system";
 
-type CardProps = LayoutProps & SpaceProps & FlexProps;
+type CardProps = LayoutProps & SpaceProps & FlexboxProps;
 
 export const CardArea = styled.div<CardProps>`
     position: static;
     width: 316px;
     height: 314px;
-    top: 118px;
     ${layout}
     ${space}
+    ${flexbox}
 `;
-export const DescriptionBloc = styled.div`
+export const TitleBloc = styled.div<CardProps>`
+    /* Title */
+    position: static;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    ${layout}
+    ${space}
+    ${flexbox}
+`;
+export const DescriptionBloc = styled.div<CardProps>`
     /* Auto Layout */
 
     display: flex;
@@ -20,11 +28,11 @@ export const DescriptionBloc = styled.div`
     padding: 0px;
 
     position: static;
-    width: 203px;
-    height: 102px;
-    ${flex}
+    ${layout}
+    ${space}
+    ${flexbox}
 `;
-export const InfoBloc = styled.div`
+export const InfoBloc = styled.div<CardProps>`
     /* Auto Layout */
 
     display: flex;
@@ -33,16 +41,13 @@ export const InfoBloc = styled.div`
     padding: 0px;
 
     position: static;
-    width: 87px;
-    left: 24px;
-    top: 68.33%;
-    bottom: 24.66%;
+    ${layout}
+    ${space}
+    ${flexbox}
 
 `;
-export const CardBackground = styled.div`
+export const CardBackground = styled.div<CardProps>`
     /* card-background */
-
-
     position: static;
     left: 0%;
     right: 0%;
@@ -56,20 +61,29 @@ export const CardBackground = styled.div`
     box-sizing: border-box;
     border-radius: 6px;
 `;
-export const TitleBloc = styled.div<CardProps>`
-    /* Title */
-    position: static;
-    width: 134px;
-    height: 14px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    ${flex}
+export const Chk = styled.span<CardProps>`
+    ${layout}
+    ${space}
+    ${flexbox}
 `;
-export const IconBloc = styled.div`
+export const Box = styled.div<CardProps>`
+    ${layout}
+    ${space}
+    ${flexbox}
+`;
+export const Tog = styled.input<CardProps>`
+    ${layout}
+    ${space}
+    ${flexbox}
+`;
+export const IconBloc = styled.div<CardProps>`
     position: static;
-    left: 77.07%;
-    right: 7.64%;
-    top: 22.47%;
-    bottom: 62.34%;
+    ${layout}
+    ${space}
+    ${flexbox}
+`;
+export const Icon = styled.img`
+    
 `;
 export const LineTop = styled.div`
     position: static;

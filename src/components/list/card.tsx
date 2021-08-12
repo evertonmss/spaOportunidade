@@ -1,19 +1,19 @@
 import { Column, Row } from "../layout";
 import { TxtDescription, TitleCard, TxtButton, TxtInstituion, TxtLocation, TxtInfo, TxtQuantite } from "../text";
 import { ButtonDonate } from "../button";
-import { CardArea, CardBackground, DescriptionBloc, InfoBloc, LineBot, LineTop, TitleBloc, IconBloc} from "../layout/cardLayout";
+import { CardArea, CardBackground, DescriptionBloc, InfoBloc, LineBot, LineTop, TitleBloc, IconBloc, Icon} from "../layout/cardLayout";
 import { Oportunite } from "../../interfaces";
 //url icons https://imgur.com/a/Dbf0VG2
 //material https://i.imgur.com/xiAyN3f.png
 //volutario https://i.imgur.com/At4JhCy.png
 //contribution https://i.imgur.com/9fWviMv.png
-export const CardDonate: React.FC<Oportunite> = ({ title, description,institution,quantite, location }) => {
+export const CardDonate: React.FC<Oportunite> = ({ title, description,institution,quantite, location, txtButton, iconUrl }) => {
     return (
-        <CardArea>
+        <CardArea margin='16px'>
             <CardBackground>
                 <Column>
-                    <Row align-items='center' height='30px'>
-                        <TitleBloc flex='1' verticalAlign='center'> 
+                    <Row align-items='center' height='30px' justifyContent ='left'>
+                        <TitleBloc marginLeft='24px' marginTop='5px'> 
                             <TitleCard>
                                 {title}
                             </TitleCard>
@@ -21,7 +21,7 @@ export const CardDonate: React.FC<Oportunite> = ({ title, description,institutio
                     </Row>
                     <LineTop />
                     <Row>
-                        <DescriptionBloc>
+                        <DescriptionBloc margin='10px'>
                             <TxtDescription>
                                 {description}
                             </TxtDescription>
@@ -29,11 +29,11 @@ export const CardDonate: React.FC<Oportunite> = ({ title, description,institutio
                                 {institution}
                             </TxtInstituion>
                         </DescriptionBloc>
-                        <IconBloc>
-                            <img src="https://i.imgur.com/xiAyN3f.png" alt="material" />
+                        <IconBloc marginRight='24px' height='130px' width='80px'>
+                            <Icon src={iconUrl} alt="Icone"></Icon>
                         </IconBloc>
                     </Row>
-                    <Row display="flex">
+                    <Row >
                         <Column flex='1'>    
                             <InfoBloc>
                                 <TxtQuantite>
@@ -47,14 +47,17 @@ export const CardDonate: React.FC<Oportunite> = ({ title, description,institutio
                          <Column align-items='right' marginBottom='24px'>
                             <ButtonDonate>
                                 <TxtButton>
-                                    Doar
+                                    {txtButton}
                                 </TxtButton>
                             </ButtonDonate>
                          </Column>
                     </Row>
                     <LineBot />
-                    <Row>
-                        <TxtLocation>{location}</TxtLocation>
+                    <Row alignItems='center'>
+                        <Column marginLeft='24px' marginBottom='12px' marginTop='15px'>
+                            <TxtLocation>{location}</TxtLocation>
+                        </Column>
+                        
                     </Row>
                 </Column>
             </CardBackground>

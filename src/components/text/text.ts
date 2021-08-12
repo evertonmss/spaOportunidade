@@ -42,3 +42,18 @@ export const TxtGeo = styled.p`
     color: #8798AD;
 
 `;
+export const TxtTodas = styled.p`
+    position: static;
+
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+
+    align-items: center;
+    text-align: center;
+
+    color: #21D170;
+
+`;
