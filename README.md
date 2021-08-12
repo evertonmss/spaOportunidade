@@ -1,8 +1,10 @@
 ## spaOportunidade
 
 Single Page Aplication em React utilizando Hooks, TypeScript, Styled Components e Axios.\
-Utilize o comando: json-server oportunites.json -p 3333 para rodar uma fake api que a Spa ira consumir.\ 
-Qualquer duvida mande uma Issue. Fique agora com as instruções para rodar a aplicação.
+Utilize o comando: json-server oportunites.json -p 3333 para rodar uma fake api que a Spa ira consumir.
+Qualquer duvida mande uma Issue.
+
+Fique agora com as instruções para rodar a aplicação.
 
 ### Available Scripts
 
